@@ -1,0 +1,1098 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale = 1.0" />
+  <meta name="description"
+    content="Up Build allows users to create goal hierarchies that direct daily efforts to what matters long-term." />
+  <title>Up Build</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="page active" id="landing">
+    <img class="logo-big" id="logo" src="Site Logo - No Background.png" alt="Upbuild Logo">
+    <h1 class="landing-motto">Always Look Up - Build Every Day</h1>
+    <div class="landing-button">
+      <button data-modal-target="#signup" id="buttonSignUp" class="button-main">Sign Up</button>
+      <button data-modal-target="#login" id="buttonLogIn" class="button-main">Log In</button>
+    </div>
+    <div class="modal" id="login">
+      <button data-close-button class="modal-close">&times;</button>
+      <img class="logo-modal" src="Site Logo - No Background.png" alt="Upbuild Logo">
+      <h2 class="modal-title landing">Log In Here</h2>
+      <div class="modal-body">
+        <label class="modal-label" id="usernameText" for="usernameInput">Username</label>
+        <input class="modal-input" id="usernameInput" type="text">
+        <label class="modal-label" id="passwordText" for="passwordInput">Password</label>
+        <input class="modal-input forgot" id="passwordInput" type="text">
+        <button class="small-link forgot" id="forgotPassword">Forgot Password?</button>
+      </div>
+      <button class="button-main modal-button landing-button" id="buttonLogInConfirm">Log In </button>
+      <button class="small-link user-link" id="newUser">New User? Sign Up Here</button>
+    </div>
+    <div class="modal" id="signup">
+      <button data-close-button class="modal-close">&times;</button>
+      <img class="logo-modal" src="Site Logo - No Background.png" alt="Upbuild Logo">
+      <h2 class="modal-title landing">Sign Up Here</h2>
+      <div class="modal-body">
+        <label class="modal-label" id="usernameTextNew" for="usernameInputNew">Enter Username</label>
+        <input class="modal-input" id="usernameInputNew" type="text">
+        <label class="modal-label" id="passwordTextNew" for="passwordInputNew">Enter Password</label>
+        <input class="modal-input" id="passwordInputNew" type="text">
+        <label class="modal-label" id="passwordTextConfirm" for="passwordInputConfirm"> Confirm Password</label>
+        <input class="modal-input" id="passwordInputConfirm" type="text">
+      </div>
+      <button class="button-main modal-button landing-button" id="buttonSignUpConfirm">Sign Up</button>
+      <button class="small-link user-link" id="existUser">Existing User? Log In Here</button>
+    </div>
+    <div id="overlay"></div>
+  </div>
+
+  <div class="page new-user" id="ultimateGoal">
+
+    <div class="modal intro active" id="intro0">
+      <h2 class="modal-title intro">Welcome to Upbuild!</h2>
+      <h3 class="modal-text intro">"Every journey begins with a signle step." -Lao Tzu<br></br>We are all on our own
+        personal journey. Upbuild will help you get to where you want to be.</h3>
+      <div class="intro-buttons">
+        <button data-intro-target="intro1" class="button-main begin next">Let's Begin!</button>
+      </div>
+    </div>
+    <div class="modal intro how" id="intro1">
+      <h2 class="modal-title intro">How Upbuild Works</h2>
+      <div class="modal-intro-body">
+        <h3 class="modal-text intro abs">Upbuild is designed to keep your focus on your Ultimate Goal each day by asking
+          you to create goals of various levels. Each goal is a stepping stone to help you reach your final destination.
+        </h3>
+        <img class="pyramid-intro" src="Pyramid - Top.png" alt="Top of the Pyramid">
+      </div>
+      <div class="intro-buttons">
+        <button data-intro-target="intro1" class="button-main previous">Previous</button>
+        <button data-intro-target="intro2" class="button-main next">Next</button>
+      </div>
+      <h6 class="footerText" id="introFoot1">1/6</h6>
+    </div>
+    <div class="modal intro how" id="intro2">
+      <h2 class="modal-title intro">How Upbuild Works</h2>
+      <div class="modal-intro-body">
+        <h3 class="modal-text intro abs">You'll start by entering your Ultimate Goal - the vision of who you want to
+          become. You can be as broad or specific as you'd like, just keep it real to you.</h3>
+        <img class="pyramid-intro" src="Pyramid - Ultimate Goal.png" alt="Ultimate Goal">
+      </div>
+      <div class="intro-buttons">
+        <button data-intro-target="intro2" class="button-main previous">Previous</button>
+        <button data-intro-target="intro3" class="button-main next">Next</button>
+      </div>
+      <h6 class="footerText" id="introFoot2">2/6</h6>
+    </div>
+    <div class="modal intro how" id="intro3">
+      <h2 class="modal-title intro">How Upbuild Works</h2>
+      <div class="modal-intro-body">
+        <h3 class="modal-text intro abs">Next, you will create a few Annual Goals that point to your Ultimate Goal.
+          These should identify specifics you want to accomplish this year.</h3>
+        <img class="pyramid-intro" src="Pyramid - Annual Goals.png" alt="Annual Goals">
+      </div>
+      <div class="intro-buttons">
+        <button data-intro-target="intro3" class="button-main previous">Previous</button>
+        <button data-intro-target="intro4" class="button-main next">Next</button>
+      </div>
+      <h6 class="footerText" id="introFoot3">3/6</h6>
+    </div>
+    <div class="modal intro how" id="intro4">
+      <h2 class="modal-title intro">How Upbuild Works</h2>
+      <div class="modal-intro-body">
+        <h3 class="modal-text intro abs">You will then create some Monthly Goals that will lead to your Annual Goal.
+          After each month, you will evaluate how you are progressing to your Annual Goal and then create a new Monthly
+          Goal.</h3>
+        <img class="pyramid-intro" src="Pyramid - Monthly Goals.png" alt="Monthly Goals">
+      </div>
+      <div class="intro-buttons">
+        <button data-intro-target="intro4" class="button-main previous">Previous</button>
+        <button data-intro-target="intro5" class="button-main next">Next</button>
+      </div>
+      <h6 class="footerText" id="introFoot4">4/6</h6>
+    </div>
+    <div class="modal intro how" id="intro5">
+      <h2 class="modal-title intro">How Upbuild Works</h2>
+      <div class="modal-intro-body">
+        <h3 class="modal-text intro abs">Finally, you will be asked to create Weekly Goals for each Monthly Goal. During
+          this process, you will identify on which days during the week you will need to complete the Weekly Goal.</h3>
+        <img class="pyramid-intro" src="Pyramid - Weekly Goals.png" alt="Weekly Goals">
+      </div>
+      <div class="intro-buttons">
+        <button data-intro-target="intro5" class="button-main previous">Previous</button>
+        <button data-intro-target="intro6" class="button-main next">Next</button>
+      </div>
+      <h6 class="footerText" id="introFoot5">5/6</h6>
+    </div>
+    <div class="modal intro" id="intro6">
+      <h2 class="modal-title intro">Let's Get Started!</h2>
+      <div class="modal-intro-body">
+        <h3 class="modal-text intro">Now that you know how Upbuild works, jump on in and begin tracking your own
+          progress as you work to become your best self.</h3>
+      </div>
+      <div class="intro-buttons">
+        <button data-intro-target="intro6" class="button-main previous">Previous</button>
+        <button data-intro-target="intro7" class="button-main next">Next</button>
+      </div>
+      <h6 class="footerText" id="introFoot6">6/6</h6>
+    </div>
+    <div class="active" id="overlayIntro"></div>
+
+    <h1 class="header-text" id="ultimateHeader">Ultimate Goal</h1>
+    <h2 class="quote" id="ultimateQuote">"Keep your face toward the sunshine, and shadows will fall behind you." -Walt
+      Whitman</h2>
+    <div class="input visible ultimate" id="ultimate1">
+      <!--       <h2 class="input-header ultimate">Enter Your Ultimate Goal</h2> -->
+      <label class="input-header ultimate" for="inputUltimateGoal">Enter Your Ultimate Goal</label>
+      <textarea class="goal-input ultimate" id="inputUltimateGoal" wrap="soft"></textarea>
+    </div>
+    <button class="button-main submit-button ultimate" id="ultimateSubmit">Save and Continue</button>
+  </div>
+
+  <div class="page new-user" id="annual">
+    <h1 class="header-text" id="annualHeader">Annual Goals</h1>
+    <h2 class="quote" id="annualQuoteText">Create up to 4 Annual Goals using your Ulitmate Goal:</h2>
+    <h2 class="quote custom" id="annualQuote">???</h2>
+    <div class="input-box">
+      <div class="input visible" id="annual1">
+        <h2 class="input-header">Annual Goal 1</h2>
+        <label class="goal-text" for="inputG1Name">Goal Name</label>
+        <textarea class="goal-input" id="inputG1Name" wrap="hard"></textarea>
+        <label class="goal-text" for="inputG1Desc">Goal Description</label>
+        <textarea class="goal-input desc" id="inputG1Desc" wrap="hard"></textarea>
+      </div>
+      <div class="input" id="annual2">
+        <h2 class="input-header">Annual Goal 2</h2>
+        <label class="goal-text" for="inputG2Name">Goal Name</label>
+        <textarea class="goal-input" id="inputG2Name" wrap="soft"></textarea>
+        <label class="goal-text" for="inputG2Desc">Goal Description</label>
+        <textarea class="goal-input desc" id="inputG2Desc" wrap="soft"></textarea>
+        <button data-remove-section class="trash button-main">Remove Goal</button>
+      </div>
+      <div class="input" id="annual3">
+        <h2 class="input-header">Annual Goal 3</h2>
+        <label class="goal-text" for="inputG3Name">Goal Name</label>
+        <textarea class="goal-input" id="inputG3Name" wrap="soft"></textarea>
+        <label class="goal-text" for="inputG3Desc">Goal Description</label>
+        <textarea class="goal-input desc" id="inputG3Desc" wrap="soft"></textarea>
+        <button data-remove-section class="trash button-main">Remove Goal</button>
+      </div>
+      <div class="input" id="annual4">
+        <h2 class="input-header">Annual Goal 4</h2>
+        <label class="goal-text" for="inputG4Name">Goal Name</label>
+        <textarea class="goal-input" id="inputG4Name" wrap="soft"></textarea>
+        <label class="goal-text" for="inputG4Desc">Goal Description</label>
+        <textarea class="goal-input desc" id="inputG4Desc" wrap="soft"></textarea>
+        <button data-remove-section class="trash button-main">Remove Goal</button>
+      </div>
+      <div class="input visible add-goal" id="addButtonBox">
+        <button data-add-goal class="add-button" id="addButtonAnnual">&plus;</button>
+      </div>
+    </div>
+    <button class="button-main submit-button" id="annualSubmit">Save and Continue</button>
+  </div>
+  <div class="modal small" id="noData">
+    <h2 class="modal-title">No Goal Found</h2>
+    <h3 class="modal-text" id="passwordText">You must enter information for at least one goal in order to continue.</h3>
+    <button data-close-button class="button-main modal-button input-error">OK </button>
+  </div>
+  <div id="overlayDark"></div>
+
+  <div class="page new-user" id="month1">
+    <h1 class="header-text" id="monthHeader1">Monthly Goals</h1>
+    <h2 class="quote">Enter up to 3 monthly goals that will help you accomplish your 1st Annual Goal:</h2>
+    <h2 class="quote custom" id="monthQuote-1">???</h2>
+    <div class="input-box">
+      <div class="input visible" id="month1-1">
+        <h2 class="input-header">Monthly Goal 1</h2>
+        <label class="goal-text" for="inputG1NameMonth1">Goal Name</label>
+        <textarea class="goal-input" id="inputG1NameMonth1" wrap="soft"></textarea>
+        <label class="goal-text" for="inputG1DescMonth1">Goal Description</label>
+        <textarea class="goal-input desc" id="inputG1DescMonth1" wrap="soft"></textarea>
+      </div>
+      <div class="input" id="month1-2">
+        <h2 class="input-header">Monthly Goal 2</h2>
+        <label class="goal-text" for="inputG2NameMonth1">Goal Name</label>
+        <textarea class="goal-input" id="inputG2NameMonth1" wrap="soft"></textarea>
+        <label class="goal-text" for="inputG2DescMonth1">Goal Description</label>
+        <textarea class="goal-input desc" id="inputG2DescMonth1" wrap="soft"></textarea>
+        <button data-remove-month class="trash button-main" id="removeMonth2-1">Remove Goal</button>
+      </div>
+      <div class="input" id="month1-3">
+        <h2 class="input-header">Monthly Goal 3</h2>
+        <label class="goal-text" for="inputG3NameMonth1">Goal Name</label>
+        <textarea class="goal-input" id="inputG3NameMonth1" wrap="soft"></textarea>
+        <label class="goal-text" for="inputG3DescMonth1">Goal Description</label>
+        <textarea class="goal-input desc" id="inputG3DescMonth1" wrap="soft"></textarea>
+        <button data-remove-month class="trash button-main" id="removeMonth3-1">Remove Goal</button>
+      </div>
+      <div class="input visible add-goal" id="addButtonBoxMonth1">
+        <button data-month-target class="add-button" id="addButtonMonth1">&plus;</button>
+      </div>
+    </div>
+    <button data-submit-month="month1" class="button-main submit-button">Save and Continue</button>
+  </div>
+
+  <div class="page new-user" id="month2">
+    <h1 class="header-text" id="monthHeader2">Monthly Goals</h1>
+    <h2 class="quote">Enter up to 3 monthly goals that will help you accomplish your 2nd Annual Goal:</h2>
+    <h2 class="quote custom" id="monthQuote-2">???</h2>
+    <div class="input-box">
+      <div class="input blank"></div>
+      <div class="input visible" id="month2-1">
+        <h2 class="input-header">Monthly Goal 1</h2>
+        <label class="goal-text" for="inputG1NameMonth2">Goal Name</label>
+        <textarea class="goal-input" id="inputG1NameMonth2" wrap="soft"></textarea>
+        <label class="goal-text" for="inputG1DescMonth2">Goal Description</label>
+        <textarea class="goal-input desc" id="inputG1DescMonth2" wrap="soft"></textarea>
+      </div>
+      <div class="input" id="month2-2">
+        <h2 class="input-header">Monthly Goal 2</h2>
+        <label class="goal-text" for="inputG2NameMonth2">Goal Name</label>
+        <textarea class="goal-input" id="inputG2NameMonth2" wrap="soft"></textarea>
+        <label class="goal-text" for="inputG2DescMonth2">Goal Description</label>
+        <textarea class="goal-input desc" id="inputG2DescMonth2" wrap="soft"></textarea>
+        <button data-remove-month class="trash button-main" id="removeMonth2-1">Remove Goal</button>
+      </div>
+      <div class="input" id="month2-3">
+        <h2 class="input-header">Monthly Goal 3</h2>
+        <label class="goal-text" for="inputG3NameMonth2">Goal Name</label>
+        <textarea class="goal-input" id="inputG3NameMonth2" wrap="soft"></textarea>
+        <label class="goal-text" for="inputG3DescMonth2">Goal Description</label>
+        <textarea class="goal-input desc" id="inputG3DescMonth2" wrap="soft"></textarea>
+        <button data-remove-month class="trash button-main" id="removeMonth3-1">Remove Goal</button>
+      </div>
+      <div class="input visible add-goal" id="addButtonBoxMonth2">
+        <button data-month-target class="add-button" id="addButtonMonth2">&plus;</button>
+      </div>
+      <div class="input blank"></div>
+    </div>
+    <button data-submit-month="month2" class="button-main submit-button">Save and Continue</button>
+  </div>
+
+  <div class="page new-user" id="month3">
+    <h1 class="header-text" id="monthHeader3">Monthly Goals</h1>
+    <h2 class="quote">Enter up to 3 monthly goals that will help you accomplish your 2nd Annual Goal:</h2>
+    <h2 class="quote custom" id="monthQuote-3">???</h2>
+    <div class="input-box">
+      <div class="input blank"></div>
+      <div class="input visible" id="month3-1">
+        <h2 class="input-header">Monthly Goal 1</h2>
+        <label class="goal-text" for="inputG1NameMonth3">Goal Name</label>
+        <textarea class="goal-input" id="inputG1NameMonth3" wrap="soft"></textarea>
+        <label class="goal-text" for="inputG1DescMonth3">Goal Description</label>
+        <textarea class="goal-input desc" id="inputG1DescMonth3" wrap="soft"></textarea>
+      </div>
+      <div class="input" id="month3-2">
+        <h2 class="input-header">Monthly Goal 2</h2>
+        <label class="goal-text" for="inputG2NameMonth3">Goal Name</label>
+        <textarea class="goal-input" id="inputG2NameMonth3" wrap="soft"></textarea>
+        <label class="goal-text" for="inputG2DescMonth3">Goal Description</label>
+        <textarea class="goal-input desc" id="inputG2DescMonth3" wrap="soft"></textarea>
+        <button data-remove-month class="trash button-main" id="removeMonth3-1">Remove Goal</button>
+      </div>
+      <div class="input" id="month3-3">
+        <h2 class="input-header">Monthly Goal 3</h2>
+        <label class="goal-text" for="inputG3NameMonth3">Goal Name</label>
+        <textarea class="goal-input" id="inputG3NameMonth3" wrap="soft"></textarea>
+        <label class="goal-text" for="inputG3DescMonth3">Goal Description</label>
+        <textarea class="goal-input desc" id="inputG3DescMonth3" wrap="soft"></textarea>
+        <button data-remove-month class="trash button-main" id="removeMonth3-1">Remove Goal</button>
+      </div>
+      <div class="input visible add-goal" id="addButtonBoxMonth3">
+        <button data-month-target class="add-button" id="addButtonMonth3">&plus;</button>
+      </div>
+      <div class="input blank"></div>
+    </div>
+    <button data-submit-month="month3" class="button-main submit-button">Save and Continue</button>
+  </div>
+
+  <div class="page new-user" id="month4">
+    <h1 class="header-text" id="monthHeader4">Monthly Goals</h1>
+    <h2 class="quote">Enter up to 3 monthly goals that will help you accomplish your 2nd Annual Goal:</h2>
+    <h2 class="quote custom" id="monthQuote-4">???</h2>
+    <div class="input-box">
+      <div class="input blank"></div>
+      <div class="input visible" id="month4-1">
+        <h2 class="input-header">Monthly Goal 1</h2>
+        <label class="goal-text" for="inputG1NameMonth4">Goal Name</label>
+        <textarea class="goal-input" id="inputG1NameMonth4" wrap="soft"></textarea>
+        <label class="goal-text" for="inputG1DescMonth4">Goal Description</label>
+        <textarea class="goal-input desc" id="inputG1DescMonth4" wrap="soft"></textarea>
+      </div>
+      <div class="input" id="month4-2">
+        <h2 class="input-header">Monthly Goal 2</h2>
+        <label class="goal-text" for="inputG2NameMonth4">Goal Name</label>
+        <textarea class="goal-input" id="inputG2NameMonth4" wrap="soft"></textarea>
+        <label class="goal-text" for="inputG2DescMonth4">Goal Description</label>
+        <textarea class="goal-input desc" id="inputG2DescMonth4" wrap="soft"></textarea>
+        <button data-remove-month class="trash button-main" id="removeMonth4-1">Remove Goal</button>
+      </div>
+      <div class="input" id="month4-3">
+        <h2 class="input-header">Monthly Goal 3</h2>
+        <label class="goal-text" for="inputG3NameMonth4">Goal Name</label>
+        <textarea class="goal-input" id="inputG3NameMonth4" wrap="soft"></textarea>
+        <label class="goal-text" for="inputG3DescMonth4">Goal Description</label>
+        <textarea class="goal-input desc" id="inputG3DescMonth4" wrap="soft"></textarea>
+        <button data-remove-month class="trash button-main" id="removeMonth4-1">Remove Goal</button>
+      </div>
+      <div class="input visible add-goal" id="addButtonBoxMonth4">
+        <button data-month-target class="add-button" id="addButtonMonth4">&plus;</button>
+      </div>
+      <div class="input blank"></div>
+    </div>
+    <button data-submit-month="month4" class="button-main submit-button">Save and Continue</button>
+  </div>
+
+  <div class="page new-user" id="week1-1">
+    <h1 class="header-text" id="weekHeader1-1">Weekly Goals</h1>
+    <h2 class="quote">Enter up to 2 weekly goals that will help you accomplish your Monthly Goal:</h2>
+    <h2 class="quote custom" id="weekQuote1-1">???</h2>
+    <div class="input-box">
+      <div class="input week visible" id="week1-1-1">
+        <h2 class="input-header">Weekly Goal 1</h2>
+        <label class="goal-text" for="inputG1NameWeek1-1">Goal Name</label>
+        <textarea class="goal-input" id="inputG1NameWeek1-1"></textarea>
+        <label class="goal-text" for="inputG1DescWeek1-1">Goal Description</label>
+        <textarea class="goal-input desc-week" id="inputG1DescWeek1-1" wrap="soft"></textarea>
+        <label class="goal-text">Days to Complete Goal</label>
+        <div class="day-buttons" id="dayButtons1-1">
+          <button data-day-select class="day" id="Sunday1-1-1">S</button>
+          <button data-day-select class="day" id="Monday1-1-1">M</button>
+          <button data-day-select class="day" id="Tuesday1-1-1">T</button>
+          <button data-day-select class="day" id="Wednesday1-1-1">W</button>
+          <button data-day-select class="day" id="Thursday1-1-1">Th</button>
+          <button data-day-select class="day" id="Friday1-1-1">F</button>
+          <button data-day-select class="day" id="Saturday1-1-1">S</button>
+        </div>
+      </div>
+      <div class="input week" id="week1-1-2">
+        <h2 class="input-header">Weekly Goal 2</h2>
+        <label class="goal-text" for="inputG2NameWeek1-1">Goal Name</label>
+        <textarea class="goal-input" id="inputG2NameWeek1-1" wrap="soft"></textarea>
+        <label class="goal-text" for="inputG2DescWeek1-1">Goal Description</label>
+        <textarea class="goal-input desc-week" id="inputG2DescWeek1-1" wrap="soft"></textarea>
+        <label class="goal-text">Days to Complete Goal</label>
+        <div class="day-buttons">
+          <button data-day-select class="day" id="Sunday1-1-2">S</button>
+          <button data-day-select class="day" id="Monday1-1-2">M</button>
+          <button data-day-select class="day" id="Tuesday1-1-2">T</button>
+          <button data-day-select class="day" id="Wednesday1-1-2">W</button>
+          <button data-day-select class="day" id="Thursday1-1-2">Th</button>
+          <button data-day-select class="day" id="Friday1-1-2">F</button>
+          <button data-day-select class="day" id="Saturday1-1-2">S</button>
+        </div>
+        <button data-remove-week class="trash button-main" id="removeWeek1-1">Remove Goal</button>
+      </div>
+      <div class="input add-goal visible" id="addButtonBoxWeek1-1">
+        <button data-week-target class="add-button" id="addButtonWeek1-1">&plus;</button>
+      </div>
+    </div>
+    <button data-submit-week="week1-1" class="button-main submit-button">Save and Continue</button>
+  </div>
+
+  <div class="page new-user" id="week1-2">
+    <h1 class="header-text" id="weekHeader1-2">Weekly Goals</h1>
+    <h2 class="quote">Enter up to 2 weekly goals that will help you accomplish your Monthly Goal:</h2>
+    <h2 class="quote custom" id="weekQuote1-2">???</h2>
+    <div class="input-box">
+      <div class="input week blank"></div>
+      <div class="input week visible" id="week1-2-1">
+        <h2 class="input-header">Weekly Goal 1</h2>
+        <label class="goal-text" for="inputG1NameWeek1-2">Goal Name</label>
+        <textarea class="goal-input" id="inputG1NameWeek1-2"></textarea>
+        <label class="goal-text" for="inputG1DescWeek1-2">Goal Description</label>
+        <textarea class="goal-input desc-week" id="inputG1DescWeek1-2" wrap="soft"></textarea>
+        <label class="goal-text">Days to Complete Goal</label>
+        <div class="day-buttons" id="dayButtons1-2">
+          <button data-day-select class="day" id="Sunday1-2-1">S</button>
+          <button data-day-select class="day" id="Monday1-2-1">M</button>
+          <button data-day-select class="day" id="Tuesday1-2-1">T</button>
+          <button data-day-select class="day" id="Wednesday1-2-1">W</button>
+          <button data-day-select class="day" id="Thursday1-2-1">Th</button>
+          <button data-day-select class="day" id="Friday1-2-1">F</button>
+          <button data-day-select class="day" id="Saturday1-2-1">S</button>
+        </div>
+      </div>
+      <div class="input week" id="week1-2-2">
+        <h2 class="input-header">Weekly Goal 2</h2>
+        <label class="goal-text" for="inputG2NameWeek1-2">Goal Name</label>
+        <textarea class="goal-input" id="inputG2NameWeek1-2" wrap="soft"></textarea>
+        <label class="goal-text" for="inputG2DescWeek1-2">Goal Description</label>
+        <textarea class="goal-input desc-week" id="inputG2DescWeek1-2" wrap="soft"></textarea>
+        <label class="goal-text">Days to Complete Goal</label>
+        <div class="day-buttons">
+          <button data-day-select class="day" id="Sunday1-2-2">S</button>
+          <button data-day-select class="day" id="Monday1-2-2">M</button>
+          <button data-day-select class="day" id="Tuesday1-2-2">T</button>
+          <button data-day-select class="day" id="Wednesday1-2-2">W</button>
+          <button data-day-select class="day" id="Thursday1-2-2">Th</button>
+          <button data-day-select class="day" id="Friday1-2-2">F</button>
+          <button data-day-select class="day" id="Saturday1-2-2">S</button>
+        </div>
+        <button data-remove-week class="trash button-main" id="removeWeek1-2">Remove Goal</button>
+      </div>
+      <div class="input add-goal visible" id="addButtonBoxWeek1-2">
+        <button data-week-target class="add-button" id="addButtonWeek1-2">&plus;</button>
+      </div>
+      <div class="input blank"></div>
+    </div>
+    <button data-submit-week="week1-2" class="button-main submit-button">Save and Continue</button>
+  </div>
+
+  <div class="page new-user" id="week1-3">
+    <h1 class="header-text" id="weekHeader1-3">Weekly Goals</h1>
+    <h2 class="quote">Enter up to 2 weekly goals that will help you accomplish your Monthly Goal:</h2>
+    <h2 class="quote custom" id="weekQuote1-3">???</h2>
+    <div class="input-box">
+      <div class="input week blank"></div>
+      <div class="input week visible" id="week1-3-1">
+        <h2 class="input-header">Weekly Goal 1</h2>
+        <label class="goal-text" for="inputG1NameWeek1-3">Goal Name</label>
+        <textarea class="goal-input" id="inputG1NameWeek1-3"></textarea>
+        <label class="goal-text" for="inputG1DescWeek1-3">Goal Description</label>
+        <textarea class="goal-input desc-week" id="inputG1DescWeek1-3" wrap="soft"></textarea>
+        <label class="goal-text">Days to Complete Goal</label>
+        <div class="day-buttons" id="dayButtons1-3">
+          <button data-day-select class="day" id="Sunday1-3-1">S</button>
+          <button data-day-select class="day" id="Monday1-3-1">M</button>
+          <button data-day-select class="day" id="Tuesday1-3-1">T</button>
+          <button data-day-select class="day" id="Wednesday1-3-1">W</button>
+          <button data-day-select class="day" id="Thursday1-3-1">Th</button>
+          <button data-day-select class="day" id="Friday1-3-1">F</button>
+          <button data-day-select class="day" id="Saturday1-3-1">S</button>
+        </div>
+      </div>
+      <div class="input week" id="week1-3-2">
+        <h2 class="input-header">Weekly Goal 2</h2>
+        <label class="goal-text" for="inputG2NameWeek1-3">Goal Name</label>
+        <textarea class="goal-input" id="inputG2NameWeek1-3" wrap="soft"></textarea>
+        <label class="goal-text" for="inputG2DescWeek1-3">Goal Description</label>
+        <textarea class="goal-input desc-week" id="inputG2DescWeek1-3" wrap="soft"></textarea>
+        <label class="goal-text">Days to Complete Goal</label>
+        <div class="day-buttons">
+          <button data-day-select class="day" id="Sunday1-3-2">S</button>
+          <button data-day-select class="day" id="Monday1-3-2">M</button>
+          <button data-day-select class="day" id="Tuesday1-3-2">T</button>
+          <button data-day-select class="day" id="Wednesday1-3-2">W</button>
+          <button data-day-select class="day" id="Thursday1-3-2">Th</button>
+          <button data-day-select class="day" id="Friday1-3-2">F</button>
+          <button data-day-select class="day" id="Saturday1-3-2">S</button>
+        </div>
+        <button data-remove-week class="trash button-main" id="removeWeek1-3">Remove Goal</button>
+      </div>
+      <div class="input add-goal visible" id="addButtonBoxWeek1-3">
+        <button data-week-target class="add-button" id="addButtonWeek1-3">&plus;</button>
+      </div>
+      <div class="input blank"></div>
+    </div>
+    <button data-submit-week="week1-3" class="button-main submit-button">Save and Continue</button>
+  </div>
+
+  <div class="page new-user" id="week2-1">
+    <h1 class="header-text" id="weekHeader2-1">Weekly Goals</h1>
+    <h2 class="quote">Enter up to 2 weekly goals that will help you accomplish your Monthly Goal:</h2>
+    <h2 class="quote custom" id="weekQuote2-1">???</h2>
+    <div class="input-box">
+      <div class="input week blank"></div>
+      <div class="input week visible" id="week2-1-1">
+        <h2 class="input-header">Weekly Goal 1</h2>
+        <label class="goal-text" for="inputG1NameWeek2-1">Goal Name</label>
+        <textarea class="goal-input" id="inputG1NameWeek2-1"></textarea>
+        <label class="goal-text" for="inputG1DescWeek2-1">Goal Description</label>
+        <textarea class="goal-input desc-week" id="inputG1DescWeek2-1" wrap="soft"></textarea>
+        <label class="goal-text">Days to Complete Goal</label>
+        <div class="day-buttons" id="dayButtons2-1">
+          <button data-day-select class="day" id="Sunday2-1-1">S</button>
+          <button data-day-select class="day" id="Monday2-1-1">M</button>
+          <button data-day-select class="day" id="Tuesday2-1-1">T</button>
+          <button data-day-select class="day" id="Wednesday2-1-1">W</button>
+          <button data-day-select class="day" id="Thursday2-1-1">Th</button>
+          <button data-day-select class="day" id="Friday2-1-1">F</button>
+          <button data-day-select class="day" id="Saturday2-1-1">S</button>
+        </div>
+      </div>
+      <div class="input week" id="week2-1-2">
+        <h2 class="input-header">Weekly Goal 2</h2>
+        <label class="goal-text" for="inputG2NameWeek2-1">Goal Name</label>
+        <textarea class="goal-input" id="inputG2NameWeek2-1" wrap="soft"></textarea>
+        <label class="goal-text" for="inputG2DescWeek2-1">Goal Description</label>
+        <textarea class="goal-input desc-week" id="inputG2DescWeek2-1" wrap="soft"></textarea>
+        <label class="goal-text">Days to Complete Goal</label>
+        <div class="day-buttons">
+          <button data-day-select class="day" id="Sunday2-1-2">S</button>
+          <button data-day-select class="day" id="Monday2-1-2">M</button>
+          <button data-day-select class="day" id="Tuesday2-1-2">T</button>
+          <button data-day-select class="day" id="Wednesday2-1-2">W</button>
+          <button data-day-select class="day" id="Thursday2-1-2">Th</button>
+          <button data-day-select class="day" id="Friday2-1-2">F</button>
+          <button data-day-select class="day" id="Saturday2-1-2">S</button>
+        </div>
+        <button data-remove-week class="trash button-main" id="removeWeek2-1">Remove Goal</button>
+      </div>
+      <div class="input add-goal visible" id="addButtonBoxWeek2-1">
+        <button data-week-target class="add-button" id="addButtonWeek2-1">&plus;</button>
+      </div>
+      <div class="input blank"></div>
+    </div>
+    <button data-submit-week="week2-1" class="button-main submit-button">Save and Continue</button>
+  </div>
+
+  <div class="page new-user" id="week2-2">
+    <h1 class="header-text" id="weekHeader2-2">Weekly Goals</h1>
+    <h2 class="quote">Enter up to 2 weekly goals that will help you accomplish your Monthly Goal:</h2>
+    <h2 class="quote custom" id="weekQuote2-2">???</h2>
+    <div class="input-box">
+      <div class="input week blank"></div>
+      <div class="input week visible" id="week2-2-1">
+        <h2 class="input-header">Weekly Goal 1</h2>
+        <label class="goal-text" for="inputG1NameWeek2-2">Goal Name</label>
+        <textarea class="goal-input" id="inputG1NameWeek2-2"></textarea>
+        <label class="goal-text" for="inputG1DescWeek2-2">Goal Description</label>
+        <textarea class="goal-input desc-week" id="inputG1DescWeek2-2" wrap="soft"></textarea>
+        <label class="goal-text">Days to Complete Goal</label>
+        <div class="day-buttons" id="dayButtons2-2">
+          <button data-day-select class="day" id="Sunday2-2-1">S</button>
+          <button data-day-select class="day" id="Monday2-2-1">M</button>
+          <button data-day-select class="day" id="Tuesday2-2-1">T</button>
+          <button data-day-select class="day" id="Wednesday2-2-1">W</button>
+          <button data-day-select class="day" id="Thursday2-2-1">Th</button>
+          <button data-day-select class="day" id="Friday2-2-1">F</button>
+          <button data-day-select class="day" id="Saturday2-2-1">S</button>
+        </div>
+      </div>
+      <div class="input week" id="week2-2-2">
+        <h2 class="input-header">Weekly Goal 2</h2>
+        <label class="goal-text" for="inputG2NameWeek2-2">Goal Name</label>
+        <textarea class="goal-input" id="inputG2NameWeek2-2" wrap="soft"></textarea>
+        <label class="goal-text" for="inputG2DescWeek2-2">Goal Description</label>
+        <textarea class="goal-input desc-week" id="inputG2DescWeek2-2" wrap="soft"></textarea>
+        <label class="goal-text">Days to Complete Goal</label>
+        <div class="day-buttons">
+          <button data-day-select class="day" id="Sunday2-2-2">S</button>
+          <button data-day-select class="day" id="Monday2-2-2">M</button>
+          <button data-day-select class="day" id="Tuesday2-2-2">T</button>
+          <button data-day-select class="day" id="Wednesday2-2-2">W</button>
+          <button data-day-select class="day" id="Thursday2-2-2">Th</button>
+          <button data-day-select class="day" id="Friday2-2-2">F</button>
+          <button data-day-select class="day" id="Saturday2-2-2">S</button>
+        </div>
+        <button data-remove-week class="trash button-main" id="removeWeek2-2">Remove Goal</button>
+      </div>
+      <div class="input add-goal visible" id="addButtonBoxWeek2-2">
+        <button data-week-target class="add-button" id="addButtonWeek2-2">&plus;</button>
+      </div>
+      <div class="input blank"></div>
+    </div>
+    <button data-submit-week="week2-2" class="button-main submit-button">Save and Continue</button>
+  </div>
+
+  <div class="page new-user" id="week2-3">
+    <h1 class="header-text" id="weekHeader2-3">Weekly Goals</h1>
+    <h2 class="quote">Enter up to 2 weekly goals that will help you accomplish your Monthly Goal:</h2>
+    <h2 class="quote custom" id="weekQuote2-3">???</h2>
+    <div class="input-box">
+      <div class="input week blank"></div>
+      <div class="input week visible" id="week2-3-1">
+        <h2 class="input-header">Weekly Goal 1</h2>
+        <label class="goal-text" for="inputG1NameWeek2-3">Goal Name</label>
+        <textarea class="goal-input" id="inputG1NameWeek2-3"></textarea>
+        <label class="goal-text" for="inputG1DescWeek2-3">Goal Description</label>
+        <textarea class="goal-input desc-week" id="inputG1DescWeek2-3" wrap="soft"></textarea>
+        <label class="goal-text">Days to Complete Goal</label>
+        <div class="day-buttons" id="dayButtons2-3">
+          <button data-day-select class="day" id="Sunday2-3-1">S</button>
+          <button data-day-select class="day" id="Monday2-3-1">M</button>
+          <button data-day-select class="day" id="Tuesday2-3-1">T</button>
+          <button data-day-select class="day" id="Wednesday2-3-1">W</button>
+          <button data-day-select class="day" id="Thursday2-3-1">Th</button>
+          <button data-day-select class="day" id="Friday2-3-1">F</button>
+          <button data-day-select class="day" id="Saturday2-3-1">S</button>
+        </div>
+      </div>
+      <div class="input week" id="week2-3-2">
+        <h2 class="input-header">Weekly Goal 2</h2>
+        <label class="goal-text" for="inputG2NameWeek2-3">Goal Name</label>
+        <textarea class="goal-input" id="inputG2NameWeek2-3" wrap="soft"></textarea>
+        <label class="goal-text" for="inputG2DescWeek2-3">Goal Description</label>
+        <textarea class="goal-input desc-week" id="inputG2DescWeek2-3" wrap="soft"></textarea>
+        <label class="goal-text">Days to Complete Goal</label>
+        <div class="day-buttons">
+          <button data-day-select class="day" id="Sunday2-3-2">S</button>
+          <button data-day-select class="day" id="Monday2-3-2">M</button>
+          <button data-day-select class="day" id="Tuesday2-3-2">T</button>
+          <button data-day-select class="day" id="Wednesday2-3-2">W</button>
+          <button data-day-select class="day" id="Thursday2-3-2">Th</button>
+          <button data-day-select class="day" id="Friday2-3-2">F</button>
+          <button data-day-select class="day" id="Saturday2-3-2">S</button>
+        </div>
+        <button data-remove-week class="trash button-main" id="removeWeek2-3">Remove Goal</button>
+      </div>
+      <div class="input add-goal visible" id="addButtonBoxWeek2-3">
+        <button data-week-target class="add-button" id="addButtonWeek2-3">&plus;</button>
+      </div>
+      <div class="input blank"></div>
+    </div>
+    <button data-submit-week="week2-3" class="button-main submit-button">Save and Continue</button>
+  </div>
+
+  <div class="page new-user" id="week3-1">
+    <h1 class="header-text" id="weekHeader3-1">Weekly Goals</h1>
+    <h2 class="quote">Enter up to 2 weekly goals that will help you accomplish your Monthly Goal:</h2>
+    <h2 class="quote custom" id="weekQuote3-1">???</h2>
+    <div class="input-box">
+      <div class="input week blank"></div>
+      <div class="input week visible" id="week3-1-1">
+        <h2 class="input-header">Weekly Goal 1</h2>
+        <label class="goal-text" for="inputG1NameWeek3-1">Goal Name</label>
+        <textarea class="goal-input" id="inputG1NameWeek3-1"></textarea>
+        <label class="goal-text" for="inputG1DescWeek3-1">Goal Description</label>
+        <textarea class="goal-input desc-week" id="inputG1DescWeek3-1" wrap="soft"></textarea>
+        <label class="goal-text">Days to Complete Goal</label>
+        <div class="day-buttons" id="dayButtons3-1">
+          <button data-day-select class="day" id="Sunday3-1-1">S</button>
+          <button data-day-select class="day" id="Monday3-1-1">M</button>
+          <button data-day-select class="day" id="Tuesday3-1-1">T</button>
+          <button data-day-select class="day" id="Wednesday3-1-1">W</button>
+          <button data-day-select class="day" id="Thursday3-1-1">Th</button>
+          <button data-day-select class="day" id="Friday3-1-1">F</button>
+          <button data-day-select class="day" id="Saturday3-1-1">S</button>
+        </div>
+      </div>
+      <div class="input week" id="week3-1-2">
+        <h2 class="input-header">Weekly Goal 2</h2>
+        <label class="goal-text" for="inputG2NameWeek3-1">Goal Name</label>
+        <textarea class="goal-input" id="inputG2NameWeek3-1" wrap="soft"></textarea>
+        <label class="goal-text" for="inputG2DescWeek3-1">Goal Description</label>
+        <textarea class="goal-input desc-week" id="inputG2DescWeek3-1" wrap="soft"></textarea>
+        <label class="goal-text">Days to Complete Goal</label>
+        <div class="day-buttons">
+          <button data-day-select class="day" id="Sunday3-1-2">S</button>
+          <button data-day-select class="day" id="Monday3-1-2">M</button>
+          <button data-day-select class="day" id="Tuesday3-1-2">T</button>
+          <button data-day-select class="day" id="Wednesday3-1-2">W</button>
+          <button data-day-select class="day" id="Thursday3-1-2">Th</button>
+          <button data-day-select class="day" id="Friday3-1-2">F</button>
+          <button data-day-select class="day" id="Saturday3-1-2">S</button>
+        </div>
+        <button data-remove-week class="trash button-main" id="removeWeek3-1">Remove Goal</button>
+      </div>
+      <div class="input add-goal visible" id="addButtonBoxWeek3-1">
+        <button data-week-target class="add-button" id="addButtonWeek3-1">&plus;</button>
+      </div>
+      <div class="input blank"></div>
+    </div>
+    <button data-submit-week="week3-1" class="button-main submit-button">Save and Continue</button>
+  </div>
+
+  <div class="page new-user" id="week3-2">
+    <h1 class="header-text" id="weekHeader3-2">Weekly Goals</h1>
+    <h2 class="quote">Enter up to 2 weekly goals that will help you accomplish your Monthly Goal:</h2>
+    <h2 class="quote custom" id="weekQuote3-2">???</h2>
+    <div class="input-box">
+      <div class="input week blank"></div>
+      <div class="input week visible" id="week3-2-1">
+        <h2 class="input-header">Weekly Goal 1</h2>
+        <label class="goal-text" for="inputG1NameWeek3-2">Goal Name</label>
+        <textarea class="goal-input" id="inputG1NameWeek3-2"></textarea>
+        <label class="goal-text" for="inputG1DescWeek3-2">Goal Description</label>
+        <textarea class="goal-input desc-week" id="inputG1DescWeek3-2" wrap="soft"></textarea>
+        <label class="goal-text">Days to Complete Goal</label>
+        <div class="day-buttons" id="dayButtons3-2">
+          <button data-day-select class="day" id="Sunday3-2-1">S</button>
+          <button data-day-select class="day" id="Monday3-2-1">M</button>
+          <button data-day-select class="day" id="Tuesday3-2-1">T</button>
+          <button data-day-select class="day" id="Wednesday3-2-1">W</button>
+          <button data-day-select class="day" id="Thursday3-2-1">Th</button>
+          <button data-day-select class="day" id="Friday3-2-1">F</button>
+          <button data-day-select class="day" id="Saturday3-2-1">S</button>
+        </div>
+      </div>
+      <div class="input week" id="week3-2-2">
+        <h2 class="input-header">Weekly Goal 2</h2>
+        <label class="goal-text" for="inputG2NameWeek3-2">Goal Name</label>
+        <textarea class="goal-input" id="inputG2NameWeek3-2" wrap="soft"></textarea>
+        <label class="goal-text" for="inputG2DescWeek3-2">Goal Description</label>
+        <textarea class="goal-input desc-week" id="inputG2DescWeek3-2" wrap="soft"></textarea>
+        <label class="goal-text">Days to Complete Goal</label>
+        <div class="day-buttons">
+          <button data-day-select class="day" id="Sunday3-2-2">S</button>
+          <button data-day-select class="day" id="Monday3-2-2">M</button>
+          <button data-day-select class="day" id="Tuesday3-2-2">T</button>
+          <button data-day-select class="day" id="Wednesday3-2-2">W</button>
+          <button data-day-select class="day" id="Thursday3-2-2">Th</button>
+          <button data-day-select class="day" id="Friday3-2-2">F</button>
+          <button data-day-select class="day" id="Saturday3-2-2">S</button>
+        </div>
+        <button data-remove-week class="trash button-main" id="removeWeek3-2">Remove Goal</button>
+      </div>
+      <div class="input add-goal visible" id="addButtonBoxWeek3-2">
+        <button data-week-target class="add-button" id="addButtonWeek3-2">&plus;</button>
+      </div>
+      <div class="input blank"></div>
+    </div>
+    <button data-submit-week="week3-2" class="button-main submit-button">Save and Continue</button>
+  </div>
+
+  <div class="page new-user" id="week3-3">
+    <h1 class="header-text" id="weekHeader3-3">Weekly Goals</h1>
+    <h2 class="quote">Enter up to 2 weekly goals that will help you accomplish your Monthly Goal:</h2>
+    <h2 class="quote custom" id="weekQuote3-3">???</h2>
+    <div class="input-box">
+      <div class="input week blank"></div>
+      <div class="input week visible" id="week3-3-1">
+        <h2 class="input-header">Weekly Goal 1</h2>
+        <label class="goal-text" for="inputG1NameWeek3-3">Goal Name</label>
+        <textarea class="goal-input" id="inputG1NameWeek3-3"></textarea>
+        <label class="goal-text" for="inputG1DescWeek3-3">Goal Description</label>
+        <textarea class="goal-input desc-week" id="inputG1DescWeek3-3" wrap="soft"></textarea>
+        <label class="goal-text">Days to Complete Goal</label>
+        <div class="day-buttons" id="dayButtons3-3">
+          <button data-day-select class="day" id="Sunday3-3-1">S</button>
+          <button data-day-select class="day" id="Monday3-3-1">M</button>
+          <button data-day-select class="day" id="Tuesday3-3-1">T</button>
+          <button data-day-select class="day" id="Wednesday3-3-1">W</button>
+          <button data-day-select class="day" id="Thursday3-3-1">Th</button>
+          <button data-day-select class="day" id="Friday3-3-1">F</button>
+          <button data-day-select class="day" id="Saturday3-3-1">S</button>
+        </div>
+      </div>
+      <div class="input week" id="week3-3-2">
+        <h2 class="input-header">Weekly Goal 2</h2>
+        <label class="goal-text" for="inputG2NameWeek3-3">Goal Name</label>
+        <textarea class="goal-input" id="inputG2NameWeek3-3" wrap="soft"></textarea>
+        <label class="goal-text" for="inputG2DescWeek3-3">Goal Description</label>
+        <textarea class="goal-input desc-week" id="inputG2DescWeek3-3" wrap="soft"></textarea>
+        <label class="goal-text">Days to Complete Goal</label>
+        <div class="day-buttons">
+          <button data-day-select class="day" id="Sunday3-3-2">S</button>
+          <button data-day-select class="day" id="Monday3-3-2">M</button>
+          <button data-day-select class="day" id="Tuesday3-3-2">T</button>
+          <button data-day-select class="day" id="Wednesday3-3-2">W</button>
+          <button data-day-select class="day" id="Thursday3-3-2">Th</button>
+          <button data-day-select class="day" id="Friday3-3-2">F</button>
+          <button data-day-select class="day" id="Saturday3-3-2">S</button>
+        </div>
+        <button data-remove-week class="trash button-main" id="removeWeek3-3">Remove Goal</button>
+      </div>
+      <div class="input add-goal visible" id="addButtonBoxWeek3-3">
+        <button data-week-target class="add-button" id="addButtonWeek3-3">&plus;</button>
+      </div>
+      <div class="input blank"></div>
+    </div>
+    <button data-submit-week="week3-3" class="button-main submit-button">Save and Continue</button>
+  </div>
+
+  <div class="page new-user" id="week4-1">
+    <h1 class="header-text" id="weekHeader4-1">Weekly Goals</h1>
+    <h2 class="quote">Enter up to 2 weekly goals that will help you accomplish your Monthly Goal:</h2>
+    <h2 class="quote custom" id="weekQuote4-1">???</h2>
+    <div class="input-box">
+      <div class="input week blank"></div>
+      <div class="input week visible" id="week4-1-1">
+        <h2 class="input-header">Weekly Goal 1</h2>
+        <label class="goal-text" for="inputG1NameWeek4-1">Goal Name</label>
+        <textarea class="goal-input" id="inputG1NameWeek4-1"></textarea>
+        <label class="goal-text" for="inputG1DescWeek4-1">Goal Description</label>
+        <textarea class="goal-input desc-week" id="inputG1DescWeek4-1" wrap="soft"></textarea>
+        <label class="goal-text">Days to Complete Goal</label>
+        <div class="day-buttons" id="dayButtons4-1">
+          <button data-day-select class="day" id="Sunday4-1-1">S</button>
+          <button data-day-select class="day" id="Monday4-1-1">M</button>
+          <button data-day-select class="day" id="Tuesday4-1-1">T</button>
+          <button data-day-select class="day" id="Wednesday4-1-1">W</button>
+          <button data-day-select class="day" id="Thursday4-1-1">Th</button>
+          <button data-day-select class="day" id="Friday4-1-1">F</button>
+          <button data-day-select class="day" id="Saturday4-1-1">S</button>
+        </div>
+      </div>
+      <div class="input week" id="week4-1-2">
+        <h2 class="input-header">Weekly Goal 2</h2>
+        <label class="goal-text" for="inputG2NameWeek4-1">Goal Name</label>
+        <textarea class="goal-input" id="inputG2NameWeek4-1" wrap="soft"></textarea>
+        <label class="goal-text" for="inputG2DescWeek4-1">Goal Description</label>
+        <textarea class="goal-input desc-week" id="inputG2DescWeek4-1" wrap="soft"></textarea>
+        <label class="goal-text">Days to Complete Goal</label>
+        <div class="day-buttons">
+          <button data-day-select class="day" id="Sunday4-1-2">S</button>
+          <button data-day-select class="day" id="Monday4-1-2">M</button>
+          <button data-day-select class="day" id="Tuesday4-1-2">T</button>
+          <button data-day-select class="day" id="Wednesday4-1-2">W</button>
+          <button data-day-select class="day" id="Thursday4-1-2">Th</button>
+          <button data-day-select class="day" id="Friday4-1-2">F</button>
+          <button data-day-select class="day" id="Saturday4-1-2">S</button>
+        </div>
+        <button data-remove-week class="trash button-main" id="removeWeek4-1">Remove Goal</button>
+      </div>
+      <div class="input add-goal visible" id="addButtonBoxWeek4-1">
+        <button data-week-target class="add-button" id="addButtonWeek4-1">&plus;</button>
+      </div>
+      <div class="input blank"></div>
+    </div>
+    <button data-submit-week="week4-1" class="button-main submit-button">Save and Continue</button>
+  </div>
+
+  <div class="page new-user" id="week4-2">
+    <h1 class="header-text" id="weekHeader4-2">Weekly Goals</h1>
+    <h2 class="quote">Enter up to 2 weekly goals that will help you accomplish your Monthly Goal:</h2>
+    <h2 class="quote custom" id="weekQuote4-2">???</h2>
+    <div class="input-box">
+      <div class="input week blank"></div>
+      <div class="input week visible" id="week4-2-1">
+        <h2 class="input-header">Weekly Goal 1</h2>
+        <label class="goal-text" for="inputG1NameWeek4-2">Goal Name</label>
+        <textarea class="goal-input" id="inputG1NameWeek4-2"></textarea>
+        <label class="goal-text" for="inputG1DescWeek4-2">Goal Description</label>
+        <textarea class="goal-input desc-week" id="inputG1DescWeek4-2" wrap="soft"></textarea>
+        <label class="goal-text">Days to Complete Goal</label>
+        <div class="day-buttons" id="dayButtons4-2">
+          <button data-day-select class="day" id="Sunday4-2-1">S</button>
+          <button data-day-select class="day" id="Monday4-2-1">M</button>
+          <button data-day-select class="day" id="Tuesday4-2-1">T</button>
+          <button data-day-select class="day" id="Wednesday4-2-1">W</button>
+          <button data-day-select class="day" id="Thursday4-2-1">Th</button>
+          <button data-day-select class="day" id="Friday4-2-1">F</button>
+          <button data-day-select class="day" id="Saturday4-2-1">S</button>
+        </div>
+      </div>
+      <div class="input week" id="week4-2-2">
+        <h2 class="input-header">Weekly Goal 2</h2>
+        <label class="goal-text" for="inputG2NameWeek4-2">Goal Name</label>
+        <textarea class="goal-input" id="inputG2NameWeek4-2" wrap="soft"></textarea>
+        <label class="goal-text" for="inputG2DescWeek4-2">Goal Description</label>
+        <textarea class="goal-input desc-week" id="inputG2DescWeek4-2" wrap="soft"></textarea>
+        <label class="goal-text">Days to Complete Goal</label>
+        <div class="day-buttons">
+          <button data-day-select class="day" id="Sunday4-2-2">S</button>
+          <button data-day-select class="day" id="Monday4-2-2">M</button>
+          <button data-day-select class="day" id="Tuesday4-2-2">T</button>
+          <button data-day-select class="day" id="Wednesday4-2-2">W</button>
+          <button data-day-select class="day" id="Thursday4-2-2">Th</button>
+          <button data-day-select class="day" id="Friday4-2-2">F</button>
+          <button data-day-select class="day" id="Saturday4-2-2">S</button>
+        </div>
+        <button data-remove-week class="trash button-main" id="removeWeek4-2">Remove Goal</button>
+      </div>
+      <div class="input add-goal visible" id="addButtonBoxWeek4-2">
+        <button data-week-target class="add-button" id="addButtonWeek4-2">&plus;</button>
+      </div>
+      <div class="input blank"></div>
+    </div>
+    <button data-submit-week="week4-2" class="button-main submit-button">Save and Continue</button>
+  </div>
+
+  <div class="page new-user" id="week4-3">
+    <h1 class="header-text" id="weekHeader4-3">Weekly Goals</h1>
+    <h2 class="quote">Enter up to 2 weekly goals that will help you accomplish your Monthly Goal:</h2>
+    <h2 class="quote custom" id="weekQuote4-3">???</h2>
+    <div class="input-box">
+      <div class="input week blank"></div>
+      <div class="input week visible" id="week4-3-1">
+        <h2 class="input-header">Weekly Goal 1</h2>
+        <label class="goal-text" for="inputG1NameWeek4-3">Goal Name</label>
+        <textarea class="goal-input" id="inputG1NameWeek4-3"></textarea>
+        <label class="goal-text" for="inputG1DescWeek4-3">Goal Description</label>
+        <textarea class="goal-input desc-week" id="inputG1DescWeek4-3" wrap="soft"></textarea>
+        <label class="goal-text">Days to Complete Goal</label>
+        <div class="day-buttons" id="dayButtons4-3">
+          <button data-day-select class="day" id="Sunday4-3-1">S</button>
+          <button data-day-select class="day" id="Monday4-3-1">M</button>
+          <button data-day-select class="day" id="Tuesday4-3-1">T</button>
+          <button data-day-select class="day" id="Wednesday4-3-1">W</button>
+          <button data-day-select class="day" id="Thursday4-3-1">Th</button>
+          <button data-day-select class="day" id="Friday4-3-1">F</button>
+          <button data-day-select class="day" id="Saturday4-3-1">S</button>
+        </div>
+      </div>
+      <div class="input week" id="week4-3-2">
+        <h2 class="input-header">Weekly Goal 2</h2>
+        <label class="goal-text" for="inputG2NameWeek4-3">Goal Name</label>
+        <textarea class="goal-input" id="inputG2NameWeek4-3" wrap="soft"></textarea>
+        <label class="goal-text" for="inputG2DescWeek4-3">Goal Description</label>
+        <textarea class="goal-input desc-week" id="inputG2DescWeek4-3" wrap="soft"></textarea>
+        <label class="goal-text">Days to Complete Goal</label>
+        <div class="day-buttons">
+          <button data-day-select class="day" id="Sunday4-3-2">S</button>
+          <button data-day-select class="day" id="Monday4-3-2">M</button>
+          <button data-day-select class="day" id="Tuesday4-3-2">T</button>
+          <button data-day-select class="day" id="Wednesday4-3-2">W</button>
+          <button data-day-select class="day" id="Thursday4-3-2">Th</button>
+          <button data-day-select class="day" id="Friday4-3-2">F</button>
+          <button data-day-select class="day" id="Saturday4-3-2">S</button>
+        </div>
+        <button data-remove-week class="trash button-main" id="removeWeek4-3">Remove Goal</button>
+      </div>
+      <div class="input add-goal visible" id="addButtonBoxWeek4-3">
+        <button data-week-target class="add-button" id="addButtonWeek4-3">&plus;</button>
+      </div>
+      <div class="input blank"></div>
+    </div>
+    <button data-submit-week="week4-3" class="button-main submit-button">Save and Continue</button>
+  </div>
+
+  <div class="page existing" id="existingMain">
+    <h1 class="header-text exist-head" id="userNameHeader">Stephen Bahr</h1>
+    <h2 class="quote exist-head" id="todayDate">???</h2>
+
+    <div class="exist-body annual visible" id="annualGoalsExist">
+      <div data-exist-annual="1" class="exist-goal visible" id="annualExist1">
+        <button class="exist-goal-button" id="annualGoalExist1">Annual Goal 1</button>
+        <i class="arrow down"></i>
+      </div>
+      <div data-exist-annual="2" class="exist-goal" id="annualExist2">
+        <button class="exist-goal-button" id="annualGoalExist2">Annual Goal 2</button>
+        <i class="arrow down"></i>
+      </div>
+      <div data-exist-annual="3" class="exist-goal" id="annualExist3">
+        <button class="exist-goal-button" id="annualGoalExist3">Annual Goal 3</button>
+        <i class="arrow down"></i>
+      </div>
+      <div data-exist-annual="4" class="exist-goal" id="annualExist4">
+        <button class="exist-goal-button" id="annualGoalExist4">Annual Goal 4</button>
+        <i class="arrow down"></i>
+      </div>
+    </div>
+
+    <div data-return-annual class="goal-text-exist" id="annualText">
+      <h3 class="goal-text" id="annualGoalText">Annual Goal</h3>
+    </div>
+
+    <div class="exist-body next" id="monthGoalsExist">
+      <div data-exist-month="1" class="exist-goal" id="monthExist1">
+        <button class="exist-goal-button" id="monthGoalExist1">Month Goal 1</button>
+        <i class="arrow down"></i>
+      </div>
+      <div data-exist-month="2" class="exist-goal" id="monthExist2">
+        <button class="exist-goal-button" id="monthGoalExist2">Month Goal 2</button>
+        <i class="arrow down"></i>
+      </div>
+      <div data-exist-month="3" class="exist-goal" id="monthExist3">
+        <button class="exist-goal-button" id="monthGoalExist3">Month Goal 3</button>
+        <i class="arrow down"></i>
+      </div>
+    </div>
+
+    <div data-return-month class="goal-text-exist" id="monthText">
+      <h3 class="goal-text" id="monthGoalText">Month Goal</h3>
+    </div>
+
+    <div class="exist-body next week" id="weekGoalsExist">
+      <div class="exist-goal week" id="weekExist1">
+        <h3 class="week-goal-name" id="weekGoalName1">Weekly Goal 1</h3>
+        <h3 class="week-goal-desc" id="weekGoalDesc1">Weekly Goal Description</h3>
+        <div class="weekday-box" id="Sunday1">
+          <h4 class="weekday-exist" id="SundayExist1">Sunday</h4>
+          <label class="switch" for="SundayComplete1">
+            <input data-week-update="sunday" type="checkbox" id="SundayComplete1">
+            <span class="slider" id="SundaySlider1"></span>
+          </label>
+        </div>
+        <div class="weekday-box" id="Monday1">
+          <h4 class="weekday-exist" id="MondayExist1">Monday</h4>
+          <label class="switch" for="MondayComplete1">
+            <input data-week-update="monday" type="checkbox" id="MondayComplete1">
+            <span class="slider round" id="MondaySlider1"></span>
+          </label>
+        </div>
+        <div class="weekday-box" id="Tuesday1">
+          <h4 class="weekday-exist" id="TuesdayExist1">Tuesday</h4>
+          <label class="switch" for="TuesdayComplete1">
+            <input data-week-update="tuesday" type="checkbox" id="TuesdayComplete1">
+            <span class="slider round" id="TuesdaySlider1"></span>
+          </label>
+        </div>
+        <div class="weekday-box" id="Wednesday1">
+          <h4 class="weekday-exist" id="WednesdayExist1">Wednesday</h4>
+          <label class="switch" for="WednesdayComplete1">
+            <input data-week-update="wednesday" type="checkbox" id="WednesdayComplete1">
+            <span class="slider round" id="WednesdaySlider1"></span>
+          </label>
+        </div>
+        <div class="weekday-box" id="Thursday1">
+          <h4 class="weekday-exist" id="ThursdayExist1">Thursday</h4>
+          <label class="switch" for="ThursdayComplete1">
+            <input data-week-update="thursday" type="checkbox" id="ThursdayComplete1">
+            <span class="slider round" id="ThursdaySlider1"></span>
+          </label>
+        </div>
+        <div class="weekday-box" id="Friday1">
+          <h4 class="weekday-exist" id="FridayExist1">Friday</h4>
+          <label class="switch" for="FridayComplete1">
+            <input data-week-update="friday" type="checkbox" id="FridayComplete1">
+            <span class="slider round" id="FridaySlider1"></span>
+          </label>
+        </div>
+        <div class="weekday-box" id="Saturday1">
+          <h4 class="weekday-exist" id="SaturdayExist1">Saturday</h4>
+          <label class="switch" for="SaturdayComplete1">
+            <input data-week-update="saturday" type="checkbox" id="SaturdayComplete1">
+            <span class="slider round" id="SaturdaySlider1"></span>
+          </label>
+        </div>
+      </div>
+      <div class="exist-goal week" id="weekExist2">
+        <h3 class="week-goal-name" id="weekGoalName2">Weekly Goal 2</h3>
+        <h3 class="week-goal-desc" id="weekGoalDesc2">Weekly Goal Description</h3>
+        <div class="weekday-box" id="Sunday2">
+          <h4 class="weekday-exist" id="SundayExist2">Sunday</h4>
+          <label class="switch" for="SundayComplete2">
+            <input data-week-update="sunday" type="checkbox" id="SundayComplete2">
+            <span class="slider round" id="SundaySlider2"></span>
+          </label>
+        </div>
+        <div class="weekday-box" id="Monday2">
+          <h4 class="weekday-exist" id="MondayExist2">Monday</h4>
+          <label class="switch" for="MondayComplete2">
+            <input data-week-update="monday" type="checkbox" id="MondayComplete2">
+            <span class="slider round" id="MondaySlider2"></span>
+          </label>
+        </div>
+        <div class="weekday-box" id="Tuesday2">
+          <h4 class="weekday-exist" id="TuesdayExist2">Tuesday</h4>
+          <label class="switch" for="TuesdayComplete2">
+            <input data-week-update="tuesday" type="checkbox" id="TuesdayComplete2">
+            <span class="slider round" id="TuesdaySlider2"></span>
+          </label>
+        </div>
+        <div class="weekday-box" id="Wednesday2">
+          <h4 class="weekday-exist" id="WednesdayExist2">Wednesday</h4>
+          <label class="switch" for="WednesdayComplete2">
+            <input data-week-update="wednesday" type="checkbox" id="WednesdayComplete2">
+            <span class="slider round" id="WednesdaySlider2"></span>
+          </label>
+        </div>
+        <div class="weekday-box" id="Thursday2">
+          <h4 class="weekday-exist" id="ThursdayExist2">Thursday</h4>
+          <label class="switch" for="ThursdayComplete2">
+            <input data-week-update="thursday" type="checkbox" id="ThursdayComplete2">
+            <span class="slider round" id="ThursdaySlider2"></span>
+          </label>
+        </div>
+        <div class="weekday-box" id="Friday2">
+          <h4 class="weekday-exist" id="FridayExist2">Friday</h4>
+          <label class="switch" for="FridayComplete2">
+            <input data-week-update="friday" type="checkbox" id="FridayComplete2">
+            <span class="slider round" id="FridaySlider2"></span>
+          </label>
+        </div>
+        <div class="weekday-box" id="Saturday2">
+          <h4 class="weekday-exist" id="SaturdayExist2">Saturday</h4>
+          <label class="switch" for="SaturdayComplete2">
+            <input data-week-update="saturday" type="checkbox" id="SaturdayComplete2">
+            <span class="slider round" id="SaturdaySlider2"></span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+  <script src="newGoals.js" type="module"></script>
+  <script src="updateGoals.js" type="module"></script>
+</body>
+
+</html>
